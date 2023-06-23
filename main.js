@@ -23,7 +23,7 @@ email.addEventListener("keyup", email_Verify);
 password.addEventListener("textInput", pass_Verify);
 
 function validated() {
-  if (email.value.length < 9) {
+  if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value) || /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/.test(email.value))) {
     email.style.border = "1px solid red";
     email_error.style.display = "block";
     email.focus();
@@ -45,7 +45,7 @@ function email_Verify() {
   else{
     email.style.border = "1px solid red";
     email_error.style.display = "block";
-    return true;
+    alert()
   }
 }
 function pass_Verify() {
