@@ -45,7 +45,7 @@ function email_Verify() {
   else{
     email.style.border = "1px solid red";
     email_error.style.display = "block";
-    alert()
+    return true;
   }
 }
 function pass_Verify() {
